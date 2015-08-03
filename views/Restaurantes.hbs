@@ -9,47 +9,30 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js" ></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" ></script>
-  <style>p{text-align: justify }</style>
-  <script language="javascript">
-
-  Function Restaurante(){
-      windows.location= "/Rest";
-  }
-  </script>
   </head>
   <body>
-    <div id="home" data-role="page" style="background-image: url(http://jqmdesigner.appspot.com/design-panel.html); background-size: 100% 80%; background-position: 10% 20%; background-repeat: no-repeat;">
-    <div data-role="header" data-position="fixed" style="background:#246; color:#fff ">
+		<div id="home" data-role="page" style="background:url(http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg) -20px 0 fixed; background-size:125%">
+			<div data-role="header" data-position="fixed" data-theme="a" style="background:#246; color:#fff">
+				<h1>Amapala</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview" data-inset="true" data-filter="true" data-count-theme="b" data-filter-placeholder="Buscar">
+					<li data-role="list-divider" style="background:#246; color:#fff">Restaurantes</li>
+					<li data-icon="carat-r">
+						<a href="#">
+							<img src="http://mw2.google.com/mw-panoramio/photos/medium/56576703.jpg" class style="width:100px; height:100px; size:100%">Restaurante Terra Mar<p>Km 20, carretera a Coyolito</p>
+</a>
+					</li>
+					<li data-icon="carat-r">
+						<a href="#">
+							<img src="http://du4zwgdg3nwxa.cloudfront.net/fotos/u/uh/uhckyheg-1329098840-bg.jpg" class style="width:100px; height:100px; size:100%">Restaurante Veleros Gualorita<p>
+                Orilla de la Playa El Burro
+              </p></a>
+					</li>
 
-      <h3>Restaurante British Colonial House </h3>
-    </div>
-    <div role="main" class="ui-content">
-      <div class="ui-grid-solo" style="height:150px; width:320px; margin:-10px">
-        <div class="ui-block-a" style="height:100%">
-          <img src="http://www.hondurastips.hn/wp-content/uploads/2014/05/British_Colonial_House1.jpg" style="margin-top:-20px; margin-left:1px; width:105%; height:180px;">
-        </div>
-      </div>
-      <h3>Descripción </h3>
-
-      <h4>Contactanos</h4> Tel: (504) 9952 8393
-      <p>Aquí encontrará un menú internacional inspirado en los gustos tradicionales y sabores exóticos del Imperio Británico durante la época Colonial. British Colonial House ofrece los platillos favoritos de las Islas Británicas, así como el continente europeo, la India, Tailandia, Asia, África, el Caribe y las Américas.
-    </p>
-    <h3>Horario</h3>
-      <p>De lunes a sábado entre 7:30 AM hasta 10:00 PM. <br>
-        Se toman los últimos pedidos en la cocina hasta las 9:30 PM.</p>
-
-
-      <div is="raty" score="3" id="raty" class="raty"></div><div class="ui-field-contain"><label for="gk-728xELL"></label><h3>Comentarios</h3><textarea id="gk-728xELL" name></textarea></div><a class="ui-btn">Enviar</a>
-      <div is="icon" style="width:60px; height:80px; position:relative">
-        <span class="ui-li-count" style="position:absolute; display:none; z-index:1; right:0; top:6px;"></span>
-        <a href="#" class="ui-btn ui-mini ui-corner-all ui-shadow" style="display:block;margin:5px;height:50%;background-image: url(http://cdn.freebiepsd.com/graphics/4/s/star-icon-icons/thumbnail.jpg); background-size: 60% 80%; background-position: 50% 50%; background-repeat: no-repeat no-repeat;"></a>
-        <div style="text-align:center;">agregar Favoritos</div>
-      </div>
-    </div>
-    <div data-role="footer" style="background:#246; color:#fff;text-shadow:none; size:12px font-size:05px" data-theme data-fullscreen data-position="fixed">
-      <h3>Copyright UNICAH SF 2015</h3>
-    </div>
-  </div>
-      <script src="javascript/actividades.js"></script>
+				</ul>
+			</div>
+		</div>
+      <script src="javascript/Hoteles.js"></script>
   </body>
 </html>

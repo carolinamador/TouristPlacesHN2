@@ -127,10 +127,6 @@
           border-radius: 6px;
        }
 
-.body{
-  background-repeat: no-repeat;
-}
-
 
  </style>
 
@@ -149,6 +145,10 @@
     function HomePage(){
         window.location = "/Home";
     }
+
+    function Principal(){
+        window.location = "/Prin";
+    }
   </script>
 
   </head>
@@ -156,7 +156,7 @@
 
 <body>
 
-    <body background="http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg" id="fondoPagina" >
+    <body background="http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg" id="fondoPagina">
 
     <img id="logo" src="/img/logoHN.png">
     <a href="#modal3" style="float:right"><h4>Registrarse</h4></a>
@@ -167,13 +167,13 @@
         <form class="FormIniciarSesion">
             <h1 style="color:white">Iniciar sesion</h1>
 
-            <input id="usuario" name="usuario" type="text" placeholder=" Usuario"><br><br>
+            <input id="usuario" name="usuario" type="text" placeholder=" Usuario" required><br><br>
 
-            <input id="pass" name="pass" type="password" placeholder=" Contraseña"><br><br>
+            <input id="pass" name="pass" type="password" placeholder=" Contraseña" required><br><br>
 
             <div id="Divboton">
 
-                <input id="btnEntrar" type="button" value="Iniciar Sesion" readonly onClick="Principal()"><br><br>
+                <input id="btnEntrar" type="button" value="Iniciar Sesion" onclick="Principal()"><br><br>
 
             </div>
 
@@ -188,7 +188,7 @@
 
                 <br><h1 style="color:black">Ingresa tus datos</h1><br>
 
-                <input id="nomb" type="text" name="txtNombre" placeholder=" Nombre completo"><br><br>
+                <input id="nomb" type="text" name="txtNombre" placeholder=" Nombre completo" ><br><br>
 
                 <input id="cor" type="text" name="txtCorreo" placeholder=" Correo electronico" ><br><br>
 
@@ -208,7 +208,7 @@
 	var usuario = document.getElementById("nombre");
 	usuario.focus()
 </script>
-<script src="javascript/.js"></script>
+<script src="javascript/FN.js"></script>
 
   </body>
 </html>

@@ -32,7 +32,7 @@ function returnApp(db){
       res.render("destino",{});
   });
 
-  app.get("/act", function(req, res){
+  app.get("/Act", function(req, res){
       res.render("Actividades",{});
   });
 
@@ -47,6 +47,18 @@ function returnApp(db){
   app.get("/Rest", function(req, res){
       res.render("Restaurantes",{});
   });
+
+  app.get("/Re", function(req, res){
+      res.render("Restaurante",{});
+  });
+
+  app.get("/Ho", function(req, res){
+      res.render("Hotel",{});
+  });
+  app.get("/Ac", function(req, res){
+      res.render("Actividad",{});
+  });
+  
   /*app.get("/:ruta", function(req,res){
     var ruta = req.params.ruta;
     res.sendFile(path.join(__dirname, 'public/'+ruta+'/Activ'+ruta+'.HTML'));

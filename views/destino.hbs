@@ -3,14 +3,22 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="stylesheets/estiloBusquedaHotel.css">
+    <link rel="stylesheet" href="/stylesheets/style.less">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js" ></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" ></script>
     <script language="javascript">
 
-    Function Vinculo(){
-        windows.location= "/Ama";
+    Function Hoteles(){
+        windows.location= "/Hot";
+    }
+
+    Function Restaurantes(){
+      windows.location="/Rest";
+    }
+
+    Function Actividades(){
+      windows.location="/Act"
     }
     </script>
   </head>
@@ -29,19 +37,19 @@
   </div>
 
     <div class="ui-grid-b" style="height:95px; margin-top:30px; text-align:center" is="grid">
-      <div class="ui-block-a" style="height:100%" is="block" onClick="Hoteles()">
-        <img is="dragable" src="http://oceassociation.org/images/f_hotel_icon.jpg" style="width:50px; margin:10px 0 0 23px;">
+      <div class="ui-block-a" style="height:100%" is="block" >
+        <img is="dragable" src="http://oceassociation.org/images/f_hotel_icon.jpg" style="width:50px; margin:10px 0 0 23px;" onClick="Hoteles()">
         <h5 is="gk-text" style="text-align:center; margin-top:-5px;" >Hoteles</h5>
     </div>
 
-    <div class="ui-block-b" style="height:100%" is="block" onClick="Restaurantes()">
-        <img is="dragable" src="http://publitell.com/system/fotos/91/Edai-icono-restaurante.png" style="width:45px; margin:10px 0 7px 24px;">
-        <h5 is="gk-text" style="text-align:center; margin-top:-7px;">Restaurantes</h5>
+    <div class="ui-block-b" style="height:100%" is="block" >
+        <img is="dragable" src="http://publitell.com/system/fotos/91/Edai-icono-restaurante.png" style="width:45px; margin:10px 0 7px 24px;" onClick="Restaurantes()">
+        <h5 is="gk-text" style="text-align:center; margin-top:-7px;" >Restaurantes</h5>
     </div>
 
-    <div class="ui-block-c" style="height:100%" is="block" onClick="Actividades()">
-        <img is="dragable" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSUUY881PMIt5Vx1ac1SNZnuE2ASlRtiXVBlmu5yJnDbll8OODt" style="width:40px; margin:15px 0 10px 27px;">
-        <h5 is="gk-text" style="text-align:center; margin-top:-10px;">Actividades</h5>
+    <div class="ui-block-c" style="height:100%" is="block" >
+        <img is="dragable" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSUUY881PMIt5Vx1ac1SNZnuE2ASlRtiXVBlmu5yJnDbll8OODt" style="width:40px; margin:15px 0 10px 27px;" onClick="Actividades()>
+        <h5 is="gk-text" style="text-align:center; margin-top:-10px;" ">Actividades</h5>
       </div>
     </div>
 
@@ -51,8 +59,13 @@
     </div>
 
     <h3>Calificar</h3>
-
-    <div is="raty" score="3" id="raty" class="raty"></div>
+    <span class="star-rating">
+      <input type="radio" name="rating" value="1"><i></i>
+      <input type="radio" name="rating" value="2"><i></i>
+      <input type="radio" name="rating" value="3"><i></i>
+      <input type="radio" name="rating" value="4"><i></i>
+      <input type="radio" name="rating" value="5"><i></i>
+      </span><strong class="choice">Choose a rating</strong>
 
     <p style="font-weight:bold;">Comentarios</p>
     <div class="ui-field-contain" style="text-align:center">

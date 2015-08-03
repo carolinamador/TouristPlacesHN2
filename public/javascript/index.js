@@ -14,8 +14,7 @@ $("#btnEntrar").click(function(){
                     console.log(jsonDoc);
                     var htmlstr = "";
                     htmlstr = '<p>'+jsonDoc.usuario.usuario+'</p> <p>'+jsonDoc.usuario.pass+'</p>'
-                    $usuario =
-                    usuariosList.html(htmlstr).listview("refresh");
+                    $usuario = usuariosList.html(htmlstr).listview("refresh");
 
                 },
                 "error":function(jqXHR,status, errorMsg){
@@ -27,9 +26,9 @@ $("#btnEntrar").click(function(){
 
 
 function todoLleno(){
-// $("#btnGuardar").click(function(){
+$("#btnRegistrarse").click(function(){
 
-    $.ajax("api/v0/agregarUsuario",
+    $.ajax("apiUser/v0/agregarUsuario",
             {
                 "method":"PUT",
                 "data":{usuario: $("#txtNombre").val(), correo: $("#txtCorreo").val(), pass: $("#txtpass").val(), confirm_pass: $("#txtPassConfir").val()},
@@ -37,8 +36,9 @@ function todoLleno(){
                 "dataType":"json",
                 "success":function(jsonDoc,status,jqXHR){
                     console.log(jsonDoc);
-                    // pagina2.html
-                    // librosList.html(htmlstr).listview("refresh");
+                    var htmlstr = "";
+                    htmlstr = '<p>'+jsonDoc.usuario.usuario+'</p> <p>'+jsonDoc.usuario.nombre+'</p>'+'<p>'+jsonDoc.usuario.pass+'</p> <p>'+jsonDoc.usuario.confirm_pass+'</p>''<p>'+jsonDoc.usuario.correo+'</p>'
+                    $usuario = usuariosList.html(htmlstr).listview("refresh");
 
                 },
                 "error":function(jqXHR,status, errorMsg){

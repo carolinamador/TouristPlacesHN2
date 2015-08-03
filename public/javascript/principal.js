@@ -33,3 +33,8 @@ $(document).on("gkComponentsReady", function () {
     });
   }
 })
+
+
+$(':radio').change(  function(){
+      $('.choice').text( this.value + ' stars' );
+      } )
