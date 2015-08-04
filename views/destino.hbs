@@ -38,18 +38,18 @@
 
     <div class="ui-grid-b" style="height:95px; margin-top:30px; text-align:center" is="grid">
       <div class="ui-block-a" style="height:100%" is="block" >
-        <img is="dragable" src="http://oceassociation.org/images/f_hotel_icon.jpg" style="width:50px; margin:10px 0 0 23px;" onClick="Hoteles()">
-        <h5 is="gk-text" style="text-align:center; margin-top:-5px;" >Hoteles</h5>
+        <a href="/Hot"><img is="dragable" src="http://oceassociation.org/images/f_hotel_icon.jpg" style="width:50px; margin:10px 0 0 23px;">
+        <h5 is="gk-text" style="text-align:center; margin-top:-5px;">Hoteles</h5></a>
     </div>
 
     <div class="ui-block-b" style="height:100%" is="block" >
-        <img is="dragable" src="http://publitell.com/system/fotos/91/Edai-icono-restaurante.png" style="width:45px; margin:10px 0 7px 24px;" onClick="Restaurantes()">
-        <h5 is="gk-text" style="text-align:center; margin-top:-7px;" >Restaurantes</h5>
+        <a href="/Re"><img is="dragable" src="http://publitell.com/system/fotos/91/Edai-icono-restaurante.png" style="width:45px; margin:10px 0 7px 24px;" >
+        <h5 is="gk-text" style="text-align:center; margin-top:-7px;" >Restaurantes</h5></a>
     </div>
 
-    <div class="ui-block-c" style="height:100%" is="block" >
-        <img is="dragable" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSUUY881PMIt5Vx1ac1SNZnuE2ASlRtiXVBlmu5yJnDbll8OODt" style="width:40px; margin:15px 0 10px 27px;" onClick="Actividades()>
-        <h5 is="gk-text" style="text-align:center; margin-top:-10px;" ">Actividades</h5>
+    <div class="ui-block-c" style="height:100%" is="block" onClick="Hoteles()">
+        <a href="/Ac"><img is="dragable" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSUUY881PMIt5Vx1ac1SNZnuE2ASlRtiXVBlmu5yJnDbll8OODt" style="width:40px; margin:15px 0 10px 27px;" >
+        <h5 is="gk-text" style="text-align:center; margin-top:-10px;" >Actividades</h5></a>
       </div>
     </div>
 
@@ -58,25 +58,16 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3882.945116867985!2d-87.65150185!3d13.291369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2shn!4v1438282675335" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
-    <h3>Calificar</h3>
-    <span class="star-rating">
-      <input type="radio" name="rating" value="1"><i></i>
-      <input type="radio" name="rating" value="2"><i></i>
-      <input type="radio" name="rating" value="3"><i></i>
-      <input type="radio" name="rating" value="4"><i></i>
-      <input type="radio" name="rating" value="5"><i></i>
-      </span><strong class="choice">Choose a rating</strong>
-
     <p style="font-weight:bold;">Comentarios</p>
     <div class="ui-field-contain" style="text-align:center">
       <!--Comentarios</label>-->
       <textarea id="gk-728xELL" name></textarea>
     </div>
-    <a class="ui-btn">Button</a>
+    <input type="button" name="btnenviar" value="enviar">
   </div>
 
-  <div data-role="footer" style="background:#246; color:#fff;text-shadow:none; size:12px font-size:05px" data-theme data-fullscreen data-position="fixed">
-    <h3>Copyright UNICAH SF 2015</h3>
+  <div data-role="footer" style="background:#246; color:#fff;text-shadow:none; size:12px font-size:05px position: fixed" data-theme data-fullscreen data-position="fixed">
+    <a href="/Prin" data-icon="home" data-theme="b" class="ui-btn-active ui-state-persist">Inicio</a>
   </div>
 </div>
       <script src="javascript/principal.js"></script>

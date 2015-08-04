@@ -156,28 +156,25 @@
 
 <body>
 
-    <body background="http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg" id="fondoPagina">
+    <body style="background:url(http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg) -20px 0 fixed; background-size:125%" id="fondoPagina">
 
-    <img id="logo" src="/img/logoHN.png">
-    <a href="#modal3" style="float:right"><h4>Registrarse</h4></a>
+    <img id="logo" src="https://mail.google.com/mail/u/0/?ui=2&ik=ad25d2d367&view=fimg&th=14ef9929889b0cd4&attid=0.1&disp=inline&realattid=f_icxkrqiy0&safe=1&attbid=ANGjdJ-_HgHJtBke-hW58GbB0oQS9ztzVdPl7_pgrMdTiaazHLbrJn26IYoRB9wRu6gqKhRROa0oRl6LDk-Pxx98y4G9U_ocTBHQStf7-zvyhHR-XfrXI19TQ15Twh4&ats=1438706216725&rm=14ef9929889b0cd4&zw&sz=w1197-h773">
+    <a href="#modal3" style="float:center"><h4>Registrarse</h4></a>
 
 
     <div id="IniciarSesion">
-
-        <form class="FormIniciarSesion">
-            <h1 style="color:white">Iniciar sesion</h1>
-
-            <input id="usuario" name="usuario" type="text" placeholder=" Usuario" required><br><br>
-
-            <input id="pass" name="pass" type="password" placeholder=" Contraseña" required><br><br>
-
-            <div id="Divboton">
-
-                <input id="btnEntrar" type="button" value="Iniciar Sesion" onclick="Principal()"><br><br>
-
-            </div>
-
+      <div data-role="content" class="ui-content" data-theme="a">
+        <form method="POST" action="/apiUser/v0/ObtenerUsuarios" data-ajax="false">
+          <div>
+            <h3>Login</h3>
+            <label for="usuario" class="ui-hidden-accessible"></label>
+            <input type="text" name="User" id="usuario" placeholder="usuario"><br><br>
+            <lable for="pass" class="ui-hidden-accesible"></label>
+            <input type="password" name="Pass" id="pass" placeholder="pass"><br><br>
+            <input type="submit" data-inline="true" value="Log in" id="btnEntrar">
+          </div>
         </form>
+      </div>
 
     <div id="modal3" class="modalmask">
         <div class="modalbox resize">

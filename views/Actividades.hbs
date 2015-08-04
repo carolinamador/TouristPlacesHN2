@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js" ></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" ></script>
-    <script language="javascript">
 
-    Function Actividades(){
-        windows.location= "/act";
-    }
-    </script>
   </head>
 
   <body>
@@ -37,7 +32,24 @@
 					</li>
 				</ul>
 			</div>
+      <div data-role="footer" style="background:#246; color:#fff;text-shadow:none; size:12px font-size:05px position: fixed" data-theme data-fullscreen data-position="fixed">
+        <a href="/Prin" data-icon="home" data-theme="b" class="ui-btn-active ui-state-persist">Inicio</a>
+      </div><div role="main" class="ui-content"></div>
+   <div data-position="fixed" data-role="footer">
+     <div data-role="navbar" style="margin:0 0 -5px;">
+       <ul>
+         <li>
+           <a href="/Prin"data-icon="home" data-theme="b" class="ui-btn-active ui-state-persist">Inicio</a>
+         </li>
+         <li>
+           <a href="/Home"data-icon="star" data-theme="b" href="#p2" data-transition="none">cerrar sesion</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+  </div>
 		</div>
+
       <script src="javascript/Hoteles.js"></script>
   </body>
 </html>

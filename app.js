@@ -23,6 +23,18 @@ function returnApp(db){
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
 
+
+  //para llamar a los modulos se usa la funcion require
+  //la uri del modulo y debe especificarse
+  //en el modulo la exportacion con
+  //module.exports = <<function>>
+  var api = require("./routes/api.js")(db);
+  var apiUser = require("./routes/apiUser.js")(db);
+
+  app.use('/apiUser/v0', apiUser);
+  app.use('/api/v0', api);
+  // http://localhost:3000/api/v0/ObtenerUser
+
   //app.use('/', routes);
   app.get("/Home", function(req, res){
       res.render("HomePage",{});
@@ -40,8 +52,12 @@ function returnApp(db){
       res.render("Hoteles",{});
   });
 
+  app.post("/login", function(req, res){
+      res.redirect("/Prin");
+  });
+
   app.get("/Prin", function(req, res){
-      res.render("Principal",{});
+    res.render("principal");
   });
 
   app.get("/Rest", function(req, res){
@@ -58,7 +74,7 @@ function returnApp(db){
   app.get("/Ac", function(req, res){
       res.render("Actividad",{});
   });
-  
+
   /*app.get("/:ruta", function(req,res){
     var ruta = req.params.ruta;
     res.sendFile(path.join(__dirname, 'public/'+ruta+'/Activ'+ruta+'.HTML'));
@@ -66,16 +82,8 @@ function returnApp(db){
 
   app.use('/users', users);
 
-  //para llamar a los modulos se usa la funcion require
-  //la uri del modulo y debe especificarse
-  //en el modulo la exportacion con
-  //module.exports = <<function>>
-  var api = require("./routes/api.js")(db);
-  var apiUser = require("./routes/apiUser.js")(db);
 
-  app.use('/apiUser/v0', apiUser);
-  app.use('/api/v0', api);
-  // http://localhost:3000/api/v0/ObtenerUser
+
 
 
   // catch 404 and forward to error handler

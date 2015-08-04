@@ -5,39 +5,22 @@ function apiUser(db){
   //collections
   var Users = db.collection("usuario");
 
-
   //rutas
-    apiUserrouter.get("/ObtenerUsuarios",
-      function(req, res){
-        var query= {};
-        Users.find(query).toArray(function(err, vUsers){
-          if(err){
-            res.status(500).json({"error":err});
-          }else{
-            res.status(200).json({"usuario":vUsers});
-          }
-        }) // Users.find toArray
-
-          //status(200)--->peticion atendida corectatamente
-          //status(300)--->peticion atendida pero se extrae cache
-          //status(400)--->no se encuentra servicio solicitado
-          //status(500)--->error en server
-      }
-  )// ObtenerDestino
-
-  apiUserrouter.get("/ObtenerUsuarios/:_id",
+  apiUserrouter.post("/ObtenerUsuarios",
     function(req, res){
-      var query ={"_id": req.params._id};
-      Users.findOne(query, function(err, doc){
-        if(err){
-          res.status(500).json({"error":err});
+      //var query= {};
+      //console.log(req.body.User);
+      Users.findOne({$and:[{"usuario": req.body.User},{"pass":req.body.Pass}]}, function(err, doc){
+        if(doc==null){
+          res.redirect("/Home");
         }else{
-          res.status(200).json({"usuario":doc});
+          res.redirect("/Prin");
         }
       });
 
     }
-  )//ObtenerDestino
+)// ObtenerUsuario
+
 
 
   apiUserrouter.post("/ModificarUsuario/:_id",
