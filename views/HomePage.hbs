@@ -14,6 +14,10 @@
       text-align : justify;
       }
 
+      #IniciarSesion{
+        margin: 30px
+      }
+
     #logo{margin-top: 30px;
           margin-left: 20px;
           width: 150px;
@@ -33,7 +37,7 @@
       border: 1px solid #b04c00;
     }
 
-  #usuario,#pass, #nomb, #cor, #pas, #confirmarpass{
+  #usuario,#pass, #nomb, #cor, #pas, #confirmarpass, #idu{
         border: 1px solid #DBE1EB;
         font-size: 18px;
         font-family: Arial, Verdana;
@@ -116,7 +120,7 @@
            }
   /*------------------------------------------------------------------------------*/
 
-  #btnEntrar {
+  #btnEntrar, #btnRegistrarse {
           color: white;
           font-family: Arial;
           font-size:18px;
@@ -126,6 +130,7 @@
           background-color: #ff911c;
           border-radius: 6px;
        }
+
 
 
  </style>
@@ -159,7 +164,6 @@
     <body style="background:url(http://farm4.staticflickr.com/3507/4048953912_94357d14ca_o.jpg) -20px 0 fixed; background-size:125%" id="fondoPagina">
 
     <img id="logo" src="https://mail.google.com/mail/u/0/?ui=2&ik=ad25d2d367&view=fimg&th=14ef9929889b0cd4&attid=0.1&disp=inline&realattid=f_icxkrqiy0&safe=1&attbid=ANGjdJ-_HgHJtBke-hW58GbB0oQS9ztzVdPl7_pgrMdTiaazHLbrJn26IYoRB9wRu6gqKhRROa0oRl6LDk-Pxx98y4G9U_ocTBHQStf7-zvyhHR-XfrXI19TQ15Twh4&ats=1438706216725&rm=14ef9929889b0cd4&zw&sz=w1197-h773">
-    <a href="#modal3" style="float:center"><h4>Registrarse</h4></a>
 
 
     <div id="IniciarSesion">
@@ -171,7 +175,7 @@
             <input type="text" name="User" id="usuario" placeholder="usuario"><br><br>
             <lable for="pass" class="ui-hidden-accesible"></label>
             <input type="password" name="Pass" id="pass" placeholder="pass"><br><br>
-            <input type="submit" data-inline="true" value="Log in" id="btnEntrar">
+            <input type="submit" data-inline="true" value="Login" id="btnEntrar">
           </div>
         </form>
       </div>
@@ -184,6 +188,7 @@
             <div style="text-align:center">
 
                 <br><h1 style="color:black">Ingresa tus datos</h1><br>
+                <input id="idu" type="text" name="txtidu" placeholder=" ID"><br><br>
 
                 <input id="nomb" type="text" name="txtNombre" placeholder=" Nombre completo" ><br><br>
 
@@ -193,14 +198,14 @@
 
                 <input id="confirmarpass" type="password" name="txtPassConfir" placeholder=" Confirmar Contraseña"><br><br>
 
-                <input id="btnRegistrarse" type="submit" value="Registrate" ><br><br>
+                <input id="btnRegistrarse" name="btnRegistrarse" type="submit" value="Registrate" ><br><br>
 
             </div>
 
         </form>
       </div>
     </div>
-
+    <a href="#modal3"  style="float:center; color:black" type="submit" value="btnRegistrase"><h2>Registrarse</h2></a>
 <script>
 	var usuario = document.getElementById("nombre");
 	usuario.focus()

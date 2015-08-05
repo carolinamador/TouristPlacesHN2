@@ -41,22 +41,24 @@ function apiUser(db){
     }
   )//ModificarUser
 
- apiUserrouter.put("/agregarUsuario",
-    function(req, res){
-      console.log(req.body);
-      var newUser = {};
-      newUser._id = req.body._id;
-      newUser.usuario = req.body.usuario;
-      Users.insertOne(newUser, function(err, doc){
-        if(err){
-          res.status(500).json({"error":err});
-        }else{
-          res.status(200).json({"usuario":doc});
-        }
-      });
-
-    }
-  )//agregarDestino
+  apiUserrouter.put("/agregarUsuario",
+         function(req, res){
+             console.log(req.body);
+             var newUser = {};
+             newUser.id_usuario = req.body.txtidu;
+             newUser.usuario = req.body.txtNombre;
+             newUser.correo = req.body.txtCorreo;
+             newUser.pass = req.body.txtPass;
+             newUser.confirm_pass = req.body.txtPassConfir;
+             Users.insertOne(newUser, function(err, doc){
+                 if(err){
+                     res.status(500).json({"error":err});
+                 }else{
+                     res.status(200).json({"usuario":doc});
+                 }
+             });
+         }
+     ) // agregarLibro
 
   apiUserrouter.delete("/EliminarUsuario/:_id",
     function(req, res){

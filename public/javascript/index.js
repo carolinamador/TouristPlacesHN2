@@ -25,27 +25,20 @@ $("#btnEntrar").click(function(){
 });
 
 
-function todoLleno(){
-$("#btnRegistrarse").click(function(){
 
-    $.ajax("apiUser/v0/agregarUsuario",
-            {
-                "method":"PUT",
-                "data":{usuario: $("#txtNombre").val(), correo: $("#txtCorreo").val(), pass: $("#txtpass").val(), confirm_pass: $("#txtPassConfir").val()},
-                // $( "#hd" ).val( ui.item.emp_id );
-                "dataType":"json",
-                "success":function(jsonDoc,status,jqXHR){
-                    console.log(jsonDoc);
-                    var htmlstr = "";
-                    htmlstr = '<p>'+jsonDoc.usuario.usuario+'</p> <p>'+jsonDoc.usuario.nombre+'</p>'+'<p>'+jsonDoc.usuario.pass+'</p> <p>'+jsonDoc.usuario.confirm_pass+'</p>''<p>'+jsonDoc.usuario.correo+'</p>'
-                    $usuario = usuariosList.html(htmlstr).listview("refresh");
 
-                },
-                "error":function(jqXHR,status, errorMsg){
-                    console.log(errorMsg);
-                }
-
-            }
-        );
-// });
+$("#btnRegistrase").click(function(){
+$.ajax("apiUser/v0/agregarUsuario",
+  {
+    "method":"PUT",
+    "data":{id_usuario: $("#txtidu").val(), usuario: $("#txtNombre").val(), correo: $("#txtCorreo").val(), pass: $("#txtPass").val(), confirm_pass: $("#txtPassConfir").val()},
+    "dataType":"json",
+    "success":function(jsonDoc,status,jqXHR){
+        console.log(jsonDoc);
+    },
+    "error":function(jqXHR,status, errorMsg){
+      console.log(errorMsg);
+        }
+      }
+    );
 }
